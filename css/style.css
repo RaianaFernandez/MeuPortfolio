@@ -329,7 +329,8 @@ opacity:0.8;
   /* Full width and height */
   display: block;
   width: 90%;
-  height: 90%;
+  height: 70%;
+  margin-top: 5%;
 
   /* Size and position background image */
   background-position: center;
