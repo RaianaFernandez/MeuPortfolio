@@ -1,0 +1,312 @@
+        <!DOCTYPE html>
+<html lang="pt-br" >
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css" media="all">
+    <link rel="icon" type="image/png" href="imagens/favicon.ico">
+    <script type="text/javascript" src="jquery-3.6.3.min.js"></script>
+    <script>
+        const buttonRight = document.getElementById('slideRight');
+        const buttonLeft = document.getElementById('slideLeft');
+
+    function left() {document.getElementById('gallery').scrollLeft -= 400;}
+    function right() {document.getElementById('gallery').scrollLeft += 400;}
+    </script>
+    <title>Raiana Fernandez</title>
+</head>
+<body>
+    <canvas id="stars" width="300" height="300"></canvas>
+     <script src="http://requirejs.org/docs/release/2.1.15/minified/require.js"></script>
+    <script src="https://rawgit.com/ironwallaby/delaunay/master/delaunay.js"></script>
+    <script  src="script.js"></script>
+       <nav class="flex">
+            <a href="#sobremim" class="logo center">
+                <img class="simbolo" src="imagens/CIRCULO-PRETO.png" alt=""/>   
+                <h1>
+                    raianafernandez
+                    <b>.</b>
+                </h1>
+            </a>  
+            <div class="menu space-b row">
+                <a href="#container">home</a>
+                <a href="#portfolio">portfólio</a>
+                <a href="#portfolio">serviços</a>
+                <a href="#contato">contato</a>
+            </div>
+        </nav>
+        <div id="container" class="space-a column">     
+            <div id="hero" class="space-b">
+                <div id="servicos" class="space-a">
+                    <div class="titles column center">            
+                        <a href="#design">
+                            <h1>
+                                <span>design</span>
+                                <br>gráfico
+                            </h1>   
+                        </a>
+                        <a href="#webdesign" >
+                            <h1>
+                                webdesign<br>
+                                &amp; UI design
+                            </h1>   
+                        </a>
+                        <a href="#ilustracao" >
+                            <h1>
+                                ilustração<br> 
+                                <span>digital</span>
+                            </h1>
+                        </a>
+                    </div>
+                    <div class="text"> 
+                        <div id="design">
+                            <span>Design Grafico</span>
+                            <p>Transformo ideias em imagens cativantes e memoráveis. Com um toque de criatividade, cores vibrantes e tipografia cuidadosamente escolhida, crio designs que contam histórias, comunicam mensagens impactantes e deixam uma marca duradoura. Do conceito à entrega final, meu compromisso é fornecer soluções visuais de alta qualidade que impulsionem sua marca e conectem você ao seu público de maneira única e envolvente. Deixe-me dar vida à sua visão por meio do poder do design gráfico.</p>
+                        </div>
+                        <div id="webdesign">
+                            <span>Web &amp; UI design</span>
+							<p>"Na era digital, sua presença online é vital. Como web designer, minha missão é transformar sua marca em uma experiência interativa e visualmente deslumbrante na web. Desenvolvo sites intuitivos, responsivos e esteticamente atraentes, garantindo que sua mensagem seja transmitida com clareza em todas as telas. Combinando design moderno, funcionalidade fluida e otimização para mecanismos de busca, construo plataformas que não apenas impressionam, mas também impulsionam resultados. Prepare-se para se destacar online com um site que realmente captura a essência de sua marca e atrai sua audiência-alvo.</p>
+                        </div>
+                        <div id="ilustracao">
+                            <span>Ilustração</span>
+							<p>Minhas ilustrações digitais têm um foco especial em retratar a essência e a individualidade das pessoas. Utilizando ferramentas avançadas, crio e restauro retratos envolventes que capturam emoções, expressões e detalhes únicos de cada pessoa. Cada traço é meticulosamente planejado para transmitir a verdadeira essência do indivíduo, resultando em obras de arte digitais que celebram a singularidade de cada retratado.</p>
+                        </div>
+                        <div id="sobremim">
+                            <span>Olá, eu sou a Raiana!</span>
+							<p>Sou uma designer apaixonada por criar experiências visuais excepcionais. Estou em constante lapidação para entregar o melhor aos meus clientes, buscando a excelência em cada projeto. Minha dedicação à melhoria contínua me impulsiona a criar designs que não apenas impressionam, mas também contam histórias autênticas. Se você busca uma parceira comprometida em trazer o melhor para sua marca, estou aqui para transformar sua visão em realidade visual</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="social center column">
+                        <a class="wp" href="https://wa.me/5548988287957" target="_blank"><img src="imagens/whatsapp.png"  alt=""/></a>
+                        <a class="ig" href="https://www.instagram.com/raianafernandez/" target="_blank"><img src="imagens/instagram.png" alt=""/></a>
+                        <a class="be" href="https://www.behance.net/FoxDesignGrafico" target="_blank"><img src="imagens/behance.png" alt=""/></a>
+                    </div>
+            </div>
+            <div id="scroller" class="center">
+                    <a class="vermais" href="#portfolio"><p>veja mais</p>
+                    </a>
+                </div>
+        </div>
+    
+    <div  id="portfolio">    
+        
+        
+        
+        <div class="center row">
+			<button id="slideLeft" type="button" onclick="left();">&#60;</button>
+            <span>arraste para o lado</span>
+			<button id="slideRight" type="button" onclick="right();">&#62;</button>
+        </div>
+        <div id="gallery">
+            <div>
+                <a href="#img1">
+                    <img src="images/1.webp" alt="Portfólio"/>
+                </a> 
+
+                <a href="#img2">
+                    <img src="images/2.webp" alt="Portfólio"/>
+                </a> 
+
+                <a href="#img13">
+                    <img src="images/13.webp" alt="Portfólio"/>
+                </a> 
+				<a href="#img30">
+                    <img src="images/30.jpg" alt="Portfólio"/>
+                </a> 
+                <a href="#img4">
+                    <img src="images/4.webp" alt="Portfólio"/>
+                </a> 
+
+                <a href="#img25">
+                    <img src="images/25.webp" alt="Portfólio"/>
+                </a> 
+
+                <a href="#img6">
+                    <img src="images/6.webp" alt="Portfólio"/>
+                </a> 
+
+                <a href="#img15">
+                    <img src="images/15.webp" alt="Portfólio"/>
+                </a> 
+                <a href="#img8">
+                    <img src="images/8.webp" alt="Portfólio"/>
+                </a> 
+
+                <a href="#img27">
+                    <img src="images/27.webp" alt="Portfólio"/>
+                </a> 
+
+                <a href="#img10">
+                    <img src="images/10.webp" alt="Portfólio"/>
+                </a> 
+
+                <a href="#img3">
+                    <img src="images/3.webp" alt="Portfólio"/>
+                </a> 
+
+                <a href="#img12">
+                    <img src="images/12.webp" alt="Portfólio"/>
+                </a> 
+                <a href="#img18">
+                    <img src="images/18.webp" alt="Portfólio"/>
+                </a>
+            </div>
+            <div>
+                <a href="#img28">
+                    <img src="images/28.webp" alt="Portfólio"/>
+                </a> 
+
+                <a href="#img17">
+                    <img src="images/17.webp" alt="Portfólio"/>
+                </a> 
+
+                <a href="#img19">
+                    <img src="images/19.webp" alt="Portfólio"/>
+                </a> 
+				<a href="#img31">
+                    <img src="images/31.jpg" alt="Portfólio"/>
+                </a> 
+                <a href="#img29">
+                    <img src="images/29.webp" alt="Portfólio"/>
+                </a> 
+                <a href="#img22">
+                    <img src="images/22.webp" alt="Portfólio"/>
+                </a> 
+                <a href="#img24">
+                    <img src="images/24.webp" alt="Portfólio"/>
+                </a> 
+                <a href="#img11">
+                    <img src="images/11.webp" alt="Portfólio"/>
+                </a> 
+
+                <a href="#img26">
+                    <img src="images/26.webp" alt="Portfólio"/>
+                </a> 
+
+                <a href="#img9">
+                    <img src="images/9.webp" alt="Portfólio"/>
+                </a> 
+
+                <a href="#img7">
+                    <img src="images/7.webp" alt="Portfólio"/>
+                </a> 
+
+                <a href="#img20">
+                    <img src="images/20.webp" alt="Portfólio"/>
+                </a>
+
+                <a href="#img14">
+                    <img src="images/14.webp" alt="Portfólio"/>
+                </a>  
+
+                <a href="#img16">
+                    <img src="images/16.webp" alt="Portfólio"/>
+                </a> 
+            </div>
+        </div>
+    </div>
+    <a href="#" class="lightbox" id="img1">
+      <span style="background-image: url('images/1.webp')"></span>
+    </a>
+    <a href="#" class="lightbox" id="img2">
+      <span style="background-image: url('images/2.webp')"></span>
+    </a>
+    <a href="#" class="lightbox" id="img3">
+      <span style="background-image:url('images/3.webp')"></span>
+    </a>
+    <a href="#" class="lightbox" id="img4">
+      <span style="background-image: url('images/4.webp')"></span>
+    </a>
+    <a href="#" class="lightbox" id="img5">
+      <span style="background-image:  url('images/5.webp')"></span>
+    </a>
+    <a href="#" class="lightbox" id="img6">
+      <span style="background-image: url('images/6.webp')"></span>
+    </a>
+    <a href="#" class="lightbox" id="img7">
+      <span style="background-image: url('images/7.webp')"></span>
+    </a>
+    <a href="#" class="lightbox" id="img8">
+      <span style="background-image: url('images/8.webp')"></span>
+    </a>
+    <a href="#" class="lightbox" id="img9">
+      <span style="background-image: url('images/9.webp')"></span>
+    </a>
+    <a href="#" class="lightbox" id="img10">
+      <span style="background-image: url('images/10.webp')"></span>
+    </a>
+    <a href="#" class="lightbox" id="img11">
+      <span style="background-image: url('images/11.webp')"></span>
+    </a>
+    <a href="#" class="lightbox" id="img12">
+      <span style="background-image: url('images/12.webp')"></span>
+    </a>
+    <a href="#" class="lightbox" id="img13">
+      <span style="background-image: url('images/13.webp')"></span>
+    </a>
+    <a href="#" class="lightbox" id="img14">
+      <span style="background-image: url('images/14.webp')"></span>
+    </a>
+    <a href="#" class="lightbox" id="img15">
+      <span style="background-image: url('images/15.webp')"></span>
+    </a>
+    <a href="#" class="lightbox" id="img16">
+      <span style="background-image: url('images/16.webp')"></span>
+    </a>
+    <a href="#" class="lightbox" id="img17">
+      <span style="background-image: url('images/17.webp')"></span>
+    </a>
+    <a href="#" class="lightbox" id="img18">
+      <span style="background-image: url('images/18.webp')"></span>
+    </a>
+    <a href="#" class="lightbox" id="img19">
+      <span style="background-image: url('images/19.webp')"></span>
+    </a>
+    <a href="#" class="lightbox" id="img20">
+      <span style="background-image: url('images/20.webp')"></span>
+    </a>
+    <a href="#" class="lightbox" id="img21">
+      <span style="background-image: url('images/21.webp')"></span>
+    </a>
+    <a href="#" class="lightbox" id="img22">
+      <span style="background-image: url('images/22.webp')"></span>
+    </a>
+    <a href="#" class="lightbox" id="img23">
+      <span style="background-image: url('images/23.webp')"></span>
+    </a>
+    <a href="#" class="lightbox" id="img24">
+      <span style="background-image: url('images/24.webp')"></span>
+    </a>
+    <a href="#" class="lightbox" id="img25">
+      <span style="background-image: url('images/25.webp')"></span>
+    </a>
+    <a href="#" class="lightbox" id="img26">
+      <span style="background-image: url('images/26.webp')"></span>
+    </a>
+    <a href="#" class="lightbox" id="img27">
+      <span style="background-image: url('images/27.webp')"></span>
+    </a>
+    <a href="#" class="lightbox" id="img28">
+      <span style="background-image: url('images/28.webp')"></span>
+    </a>
+    <a href="#" class="lightbox" id="img29">
+      <span style="background-image: url('images/29.webp')"></span>
+    </a>
+    <!--<section  class="area" >
+                <ul class="circles">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                </ul>
+            </section>-->
+    
+</body>
+</html>

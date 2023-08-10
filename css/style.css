@@ -1,0 +1,555 @@
+@charset "utf-8";
+/* CSS Document */
+@font-face {
+  font-family: "GlacialIndifference";
+    src: url("GlacialIndifference.otf") format("truetype");}
+@font-face {
+    font-family: 'GlacialIndifferenceBold';
+    src:url("GlacialIndifference-Bold.otf") format("truetype");
+}
+ 
+html{
+    /* cada 1rem é igual a 10px */
+    font-size: 62.5%;
+    
+}
+body{
+    margin: 0 auto; 
+    width:100%;
+    max-width:2000px;
+    background: #f0f0f0;
+}
+html, body{
+    scroll-behavior: smooth!important;
+    scroll-snap-type:x mandatory;
+}
+*{  
+    color:#000;
+    margin:0;
+	padding:0;
+	border:none;
+	list-style:none;
+	text-decoration:none;
+	font-family: 'GlacialIndifference', sans-serif;
+    box-sizing: border-box;
+}
+::-webkit-scrollbar {
+    backgrund:none;
+        width:10px;
+    }
+::-webkit-scrollbar-thumb {
+    background-color:#FF5565;
+    border-radius:20px;
+    }
+body::-webkit-scrollbar-button:single-button {  
+    height:0;
+    }
+.flex{
+    display:flex;
+}
+.row{
+    flex-direction: row;
+}
+.column{
+    flex-direction: column;
+}
+.center{
+	display:flex;
+	justify-content: center;
+}
+.start{
+	display:flex;
+	justify-content: flex-start;
+}
+.space-a{ 
+	display:flex;
+	justify-content: space-around;
+}
+.space-b{
+	display:flex;
+	justify-content: space-between;
+}
+
+/*------------BACKGROUND -----------*/
+#stars {
+	display: block;
+	position: fixed;
+	width: 100vw;
+	height: 16rem;
+	height: 100vh;
+	z-index: -100;
+}
+/*----------- HEADER ------------ */
+nav{
+    background: linear-gradient(rgba(240,240,240,1.00), rgba(240,240,240,0.8));
+    justify-content: space-between;
+    align-items:center;
+    flex-wrap: wrap;
+    position:fixed;
+    width:100%;
+    height:10vh;
+    font-size:1.8rem;
+    z-index:1000;
+}	
+.menu a {
+	padding: 0 25px;
+    font-family: 'GlacialIndifference';
+    transition: color 0.2s ease;
+	}
+nav a:hover{
+	color:#FF5565!important;
+	}
+nav .logo{
+    font-family: 'GlacialIndifference', sans-serif;
+    letter-spacing:0.2rem;
+    margin:5px 25px;
+    color:#000;
+    align-items: center;
+}
+.simbolo{
+    width:45px;
+    height:45px;
+    margin:10px;
+}
+/*----------- HERO ------------ */
+#container{
+    padding-top:10vh;
+    height:100vh;
+    width:100%;
+    justify-items:center;
+}
+#hero{
+    height:90%;
+    width:100%;
+}
+#servicos{
+    flex-wrap: wrap;
+    align-items: center;
+    width:95%;
+    height:100%;
+}
+.titles a h1 span{
+    margin:0 0 0 -20px!important;
+    transition:0.3s ease-in-out;
+} 
+.titles a h1 {
+    font-size:3.6rem;
+    color:#000;
+    margin:20px 0;
+    transition:0.3s ease-in-out;
+}
+.titles a h1:hover, titles a h1 span:hover{
+    font-size:3.8rem;
+    color:#FF5565;
+    transform: translateX(10px);
+}
+.titles a:nth-child(2){
+    margin:0 0 0 30px!important;
+} 
+.text{
+    padding:10px 0;
+    width:100%;
+    height:100%;
+    min-width:200px;
+    max-width:500px;
+    position:relative;
+    }
+.text div{
+    scroll-margin-top:10vh;
+    display: flex;
+    align-items:flex-start;
+    justify-content: center;
+    flex-direction:column;
+    height:100%;
+    font-size:2.0rem;
+    position:absolute;
+    transition:opacity 1s;
+    
+}
+.text div span::after{
+    content:'';
+    width:150px;
+    height:2px;
+    background:#000;
+    margin:10px 0 30px;
+    display:flex;
+}
+.text div:not(:target){
+    opacity:0; 
+  }
+#sobremim{
+  opacity: 1;
+}
+#webdesign:target ~ #sobremim,
+#ilustracao:target ~ #sobremim,
+#design:target ~ #sobremim{
+    opacity:0;
+}
+/*
+*/
+
+.text span{
+    font-size:2.2rem;
+    
+}
+.text:hover span::after{
+    background:#FF5565;
+    transition:0.3s ease-in-out;
+
+}
+.social{
+    align-items:flex-end;
+    width:45;
+}
+.social a img{
+	width:40px!important;
+	height:40px!important;
+    margin:5px 10px!important;
+    transition:0.3s ease-in-out;
+
+}
+.social a img:hover{
+    transform:scale(1.1) translateX(-2px);
+}
+/*---------------SCROLL BUTTON ------------------*/
+.vermais p, .vermais p::after{
+    color:#000;
+    transition: 0.3s;
+    font-size:1.6rem;
+}
+.vermais:hover p{
+    color:#FF5565;
+}
+.vermais:hover p::after{
+    transform:translateY(20px);  
+}
+.vermais p::after{
+    color:#000;
+    content:'\2193';
+    width:100%;
+    height:50px!important;
+    margin-bottom:10px;
+    display:block;
+    text-align:center;
+    
+}
+
+/*------------------ PORTFOLIO -------------------*/
+
+#portfolio{
+    padding-top:15vh;
+    max-width:100vw;
+    display:flex;
+    flex-direction: column;
+    overflow:hidden;
+    position:relative;
+    
+
+}
+
+#portfolio div span{
+    font-size:1.6rem;
+    text-align:center;
+    margin:0 0 20px ;
+
+}
+
+#portfolio div span:after{
+    display:inline-block;
+    margin-left:10px;
+    content:'\27F6';
+    animation: rightarrow 3s ease infinite;
+}
+#slideRight, #slideLeft{
+    /*position:absolute;
+    right:0;
+    bottom:0;*/
+    background:none;
+    width:150px;
+    height:30px;
+    z-index:100;
+    font-size:2.0rem;
+}
+#gallery{
+    scroll-behavior: smooth!important;
+    scroll-snap-type:x mandatory;
+    overflow-x:scroll;
+    overflow-y:hidden;
+	transition:smooth 0.5;
+}
+#gallery div {
+    height:250px;
+    width:100%;
+    display:flex;
+    margin: 0;
+    break-inside: avoid;
+    background:#000;
+	
+}
+#gallery div img {
+    height: 250px;
+    opacity:1;
+    transition: opacity 0.3s ease-in;
+}
+#gallery div img:hover {
+opacity:0.8;
+}
+
+#gallery::-webkit-scrollbar {
+    display:none;
+    }
+
+.lightbox {
+  /* Default to hidden */
+  display: none;
+
+  /* Overlay entire screen */
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  
+  /* A bit of padding around image */
+  padding: 1em;
+
+  /* Translucent background */
+  background: rgba(0, 0, 0, 0.8);
+}
+
+/* Unhide the lightbox when it's the target */
+.lightbox:target {
+  display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lightbox span {
+  /* Full width and height */
+  display: block;
+  width: 90%;
+  height: 90%;
+
+  /* Size and position background image */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+@keyframes rightarrow{
+   0%   {transform:translateX(0);}
+  
+  50%  {transform:translateX(10px);}
+  
+  100% {transform:translateX(0);}
+}
+
+
+
+
+
+
+ /*------------FLOATING PARTICLES BACKGROUND--------------*/
+.area{
+    scroll-snap-align: start;
+    background: linear-gradient(to right, #000000, #1E1E1E);
+    width: 100%;
+    height:600px;
+    
+   
+}
+
+.circles{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.circles li{
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 2px;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.2);
+    animation: animate 25s linear infinite;
+    bottom: -200px;
+    
+}
+
+.circles li:nth-child(1){
+    left: 25%;
+    width: 2px;
+    height: 2px;
+    animation-delay: 0s;
+}
+
+
+.circles li:nth-child(2){
+    left: 10%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 2s;
+    animation-duration: 12s;
+}
+
+.circles li:nth-child(3){
+    left: 70%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 4s;
+}
+
+.circles li:nth-child(4){
+    left: 40%;
+    width: 16px;
+    height: 16px;
+    animation-delay: 0s;
+    animation-duration: 18s;
+}
+
+.circles li:nth-child(5){
+    left: 65%;
+    width: 5px;
+    height: 5px;
+    animation-delay: 0s;
+}
+
+.circles li:nth-child(6){
+    left: 75%;
+    width: 12px;
+    height: 12px;
+    animation-delay: 3s;
+}
+
+.circles li:nth-child(7){
+    left: 35%;
+    width: 5px;
+    height: 5px;
+    animation-delay: 7s;
+}
+
+.circles li:nth-child(8){
+    left: 50%;
+    width: 8px;
+    height: 8px;
+    animation-delay: 15s;
+    animation-duration: 45s;
+}
+
+.circles li:nth-child(9){
+    left: 20%;
+    width: 6px;
+    height: 6px;
+    animation-delay: 2s;
+    animation-duration: 35s;
+}
+
+.circles li:nth-child(10){
+    left: 85%;
+    width: 3px;
+    height: 3px;
+    animation-delay: 0s;
+    animation-duration: 11s;
+}
+
+
+
+@keyframes animate {
+
+    0%{
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+        border-radius: 20%;
+    }
+   25%{
+      
+        border-radius: 50%;
+    }
+    50%{
+      
+        border-radius: 0%;
+    }
+      75%{
+      
+        border-radius: 50%;
+    }
+    100%{
+        transform: translateY(-1000px) rotate(720deg);
+        opacity: 0;
+        border-radius: 10%;
+    }
+
+}
+
+/*-------------------FOOTER--------------------*/
+
+footer{
+	padding:50px 0 30px;
+	background:#000;
+	}
+
+footer, footer a{
+	color:#fff;
+}
+
+footer h1{ 
+	font-family: 'Montserrat', sans-serif;
+	color:#fff;
+	font-size: 37px;
+    line-height: 44px;
+    font-weight: 400;
+}
+
+footer .colunas{
+	align-items:center;
+}
+
+
+footer .social{
+	width:100%;
+	text-align:center;
+	margin:40px 0 0;
+}
+footer .social a{margin:0 5px;}
+
+.footer-col ul li a{display:flex;flex-wrap:wrap; align-items:center;padding:6px 0;}
+.footer-col ul li a div{width:40px; height:40px; margin-right:20px;}
+.fox {background-image: url("../imagens/fox-w.png");background-size: contain;}
+.footer-col ul li a:hover > .fox{background-image: url("../imagens/fox-o.png");background-size: contain;}
+.mail {background-image: url("../imagens/mail.png");background-size: contain;} 
+.footer-col ul li a:hover > .mail{background-image: url("../imagens/mail-o.png");background-size: contain;}
+.wpp {background-image: url("../imagens/whatsapp-w.png");background-size: contain;}
+.footer-col ul li a:hover > .wpp{background-image: url("../imagens/whatsapp-o.png");background-size: contain;}
+
+
+
+
+@media only screen and (max-width: 600px){
+
+	nav ul li {
+	font-size:0.8rem;
+	padding: 17px 15px;
+	}
+	header .social{
+		position:static;
+		margin:0 0 5px;
+		text-align:center;
+	}
+	
+	header .social a li{width:30px;height:30px;}
+	header .social{position:static; width:100%;}
+
+/*------------------ PORTFOLIO -------------------*/
+#portfolio p{width:100%;}
+
+ 
+/*-------------------FOOTER--------------------*/
+
+    .footer-col ul{margin-top:40px;}
+    
+/*----------------- scroll blob tester ---------------------*/
