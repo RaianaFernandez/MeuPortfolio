@@ -15,6 +15,7 @@ html{
 }
 body{
     margin: 0 auto; 
+	min-width:400px;
     width:100%;
     max-width:2000px;
     background: #f0f0f0;
@@ -123,10 +124,14 @@ nav .logo{
     width:100%;
 }
 #servicos{
-    flex-wrap: wrap;
+	display:flex;
+    justify-content: space-around;
     align-items: center;
     width:95%;
     height:100%;
+}
+#servicos .titles{
+	flex-direction:column;
 }
 .titles a h1 span{
     margin:0 0 0 -20px!important;
@@ -153,40 +158,22 @@ nav .logo{
     min-width:200px;
     max-width:500px;
     position:relative;
-    }
-.text div{
-    scroll-margin-top:10vh;
-    display: flex;
+	display: flex;
     align-items:flex-start;
     justify-content: center;
     flex-direction:column;
-    height:100%;
     font-size:2.0rem;
-    position:absolute;
     transition:opacity 1s;
-    
-}
-.text div span::after{
-    content:'';
+    }
+.text span::after{
+    content:''; 
     width:150px;
     height:2px;
     background:#000;
     margin:10px 0 30px;
     display:flex;
 }
-.text div:not(:target){
-    opacity:0; 
-  }
-#sobremim{
-  opacity: 1;
-}
-#webdesign:target ~ #sobremim,
-#ilustracao:target ~ #sobremim,
-#design:target ~ #sobremim{
-    opacity:0;
-}
-/*
-*/
+
 
 .text span{
     font-size:2.2rem;
@@ -233,7 +220,6 @@ nav .logo{
     text-align:center;
     
 }
-
 /*------------------ PORTFOLIO -------------------*/
 
 #portfolio{
@@ -527,7 +513,27 @@ footer .social a{margin:0 5px;}
 .wpp {background-image: url("../imagens/whatsapp-w.png");background-size: contain;}
 .footer-col ul li a:hover > .wpp{background-image: url("../imagens/whatsapp-o.png");background-size: contain;}
 
+@media only screen and (max-width: 900px){
+	#servicos{
+		flex-direction:column;
+		justify-content:center;
+	}
+	#servicos .titles{
+		flex-direction:row;	
+		scroll-margin-top:500px;
+	}
+	.titles a h1 span{
+    margin:0!important;
+    transition:0.3s ease-in-out;
+	} 
 
+	.titles a:nth-child(2){
+		margin:0 30px!important;
+	}
+	.text{
+		height:350px;
+	}
+}
 
 
 @media only screen and (max-width: 600px){
@@ -536,14 +542,18 @@ footer .social a{margin:0 5px;}
 	font-size:0.8rem;
 	padding: 17px 15px;
 	}
+	nav a h1{
+		display:none; 
+	}
 	header .social{
 		position:static;
 		margin:0 0 5px;
 		text-align:center;
 	}
-	
-	header .social a li{width:30px;height:30px;}
-	header .social{position:static; width:100%;}
+	.text{font-size:1.6rem;}
+	.titles a h1{font-size:2.6rem;}
+	.titles a h1:hover, titles a h1 span:hover{font-size:2.7rem;}
+
 
 /*------------------ PORTFOLIO -------------------*/
 #portfolio p{width:100%;}
@@ -554,3 +564,7 @@ footer .social a{margin:0 5px;}
     .footer-col ul{margin-top:40px;}
     
 /*----------------- scroll blob tester ---------------------*/
+}
+@media only screen and (max-width: 450px){
+	.social{display:none;}
+}

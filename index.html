@@ -12,6 +12,28 @@
 
     function left() {document.getElementById('gallery').scrollLeft -= 400;}
     function right() {document.getElementById('gallery').scrollLeft += 400;}
+	
+	function textchange(t){
+		if(t=='d'){
+			document.getElementById('tit').innerHTML='Design Gráfico';
+			document.getElementById('desc').innerHTML='Transformo ideias em imagens cativantes e memoráveis. Com um toque de criatividade, cores vibrantes e tipografia cuidadosamente escolhida, crio designs que contam histórias, comunicam mensagens impactantes e deixam uma marca duradoura. Do conceito à entrega final, meu compromisso é fornecer soluções visuais de alta qualidade que impulsionem sua marca e conectem você ao seu público de maneira única e envolvente. Deixe-me dar vida à sua visão por meio do poder do design gráfico.';
+		}
+		if(t=='w'){
+			document.getElementById('tit').innerHTML='Web &amp; UI design';
+			document.getElementById('desc').innerHTML='Na era digital, sua presença online é vital. Minha missão é transformar sua marca em uma experiência interativa e deslumbrante na web. Desenvolvo sites intuitivos, responsivos e esteticamente atraentes, garantindo que sua mensagem seja transmitida com clareza em todas as telas. Combinando design moderno, funcionalidade fluida e otimização para mecanismos de busca, construo plataformas atraentes que impulsionam resultados. Prepare-se para se destacar online!';
+		}
+		if(t=='i'){
+			document.getElementById('tit').innerHTML='Ilustracao Digital';
+			document.getElementById('desc').innerHTML='Minhas ilustrações digitais têm um foco especial em retratar a essência e a individualidade das pessoas. Utilizando ferramentas avançadas, crio e restauro retratos envolventes que capturam emoções, expressões e detalhes únicos de cada pessoa. Cada traço é meticulosamente planejado para transmitir a verdadeira essência do indivíduo, resultando em obras de arte digitais que celebram a singularidade de cada retratado.';
+		}
+		if(t=='r'){
+			document.getElementById('tit').innerHTML='Olá, eu sou a Raiana!';
+			document.getElementById('desc').innerHTML='Sou uma designer apaixonada por criar experiências visuais excepcionais. Estou em constante lapidação para entregar o melhor aos meus clientes, buscando a excelência em cada projeto. Minha dedicação à melhoria contínua me impulsiona a criar designs que não apenas impressionam, mas também contam histórias autênticas. Se você busca uma parceira comprometida em trazer o melhor para sua marca, estou aqui para transformar sua visão em realidade visual.';
+		}
+		
+	}
+	
+
     </script>
     <title>Raiana Fernandez</title>
 </head>
@@ -21,7 +43,7 @@
     <script src="https://rawgit.com/ironwallaby/delaunay/master/delaunay.js"></script>
     <script  src="script.js"></script>
        <nav class="flex">
-            <a href="#sobremim" class="logo center">
+            <a href="#raianafernandez" class="logo center" onclick="textchange('r')">
                 <img class="simbolo" src="imagens/CIRCULO-PRETO.png" alt=""/>   
                 <h1>
                     raianafernandez
@@ -37,51 +59,40 @@
         </nav>
         <div id="container" class="space-a column">     
             <div id="hero" class="space-b">
-                <div id="servicos" class="space-a">
-                    <div class="titles column center">            
-                        <a href="#design">
+                <div id="servicos">
+                    <div class="titles center">            
+                        <a href="#designgrafico" onclick="textchange('d')">
                             <h1>
                                 <span>design</span>
                                 <br>gráfico
                             </h1>   
                         </a>
-                        <a href="#webdesign" >
+                        <a href="#webdesign" onclick="textchange('w')">
                             <h1>
                                 webdesign<br>
                                 &amp; UI design
                             </h1>   
                         </a>
-                        <a href="#ilustracao" >
+                        <a href="#ilustracao" onclick="textchange('i')">
                             <h1>
                                 ilustração<br> 
                                 <span>digital</span>
                             </h1>
                         </a>
                     </div>
-                    <div class="text"> 
-                        <div id="design">
-                            <span>Design Grafico</span>
-                            <p>Transformo ideias em imagens cativantes e memoráveis. Com um toque de criatividade, cores vibrantes e tipografia cuidadosamente escolhida, crio designs que contam histórias, comunicam mensagens impactantes e deixam uma marca duradoura. Do conceito à entrega final, meu compromisso é fornecer soluções visuais de alta qualidade que impulsionem sua marca e conectem você ao seu público de maneira única e envolvente. Deixe-me dar vida à sua visão por meio do poder do design gráfico.</p>
-                        </div>
-                        <div id="webdesign">
-                            <span>Web &amp; UI design</span>
-							<p>"Na era digital, sua presença online é vital. Como web designer, minha missão é transformar sua marca em uma experiência interativa e visualmente deslumbrante na web. Desenvolvo sites intuitivos, responsivos e esteticamente atraentes, garantindo que sua mensagem seja transmitida com clareza em todas as telas. Combinando design moderno, funcionalidade fluida e otimização para mecanismos de busca, construo plataformas que não apenas impressionam, mas também impulsionam resultados. Prepare-se para se destacar online com um site que realmente captura a essência de sua marca e atrai sua audiência-alvo.</p>
-                        </div>
-                        <div id="ilustracao">
-                            <span>Ilustração</span>
-							<p>Minhas ilustrações digitais têm um foco especial em retratar a essência e a individualidade das pessoas. Utilizando ferramentas avançadas, crio e restauro retratos envolventes que capturam emoções, expressões e detalhes únicos de cada pessoa. Cada traço é meticulosamente planejado para transmitir a verdadeira essência do indivíduo, resultando em obras de arte digitais que celebram a singularidade de cada retratado.</p>
-                        </div>
-                        <div id="sobremim">
-                            <span>Olá, eu sou a Raiana!</span>
-							<p>Sou uma designer apaixonada por criar experiências visuais excepcionais. Estou em constante lapidação para entregar o melhor aos meus clientes, buscando a excelência em cada projeto. Minha dedicação à melhoria contínua me impulsiona a criar designs que não apenas impressionam, mas também contam histórias autênticas. Se você busca uma parceira comprometida em trazer o melhor para sua marca, estou aqui para transformar sua visão em realidade visual</p>
-                        </div>
-                    </div>
+					<div class="text"> 
+						
+                            <span id="tit">Olá, eu sou a Raiana!</span>
+							<p id="desc">Sou uma designer apaixonada por criar experiências visuais excepcionais. Estou em constante lapidação para entregar o melhor aos meus clientes, buscando a excelência em cada projeto. Minha dedicação à melhoria contínua me impulsiona a criar designs que não apenas impressionam, mas também contam histórias autênticas. Se você busca uma parceira comprometida em trazer o melhor para sua marca, estou aqui para transformar sua visão em realidade visual</p>
+						
+					</div>
+                    
                 </div>
                 <div class="social center column">
                         <a class="wp" href="https://wa.me/5548988287957" target="_blank"><img src="imagens/whatsapp.png"  alt=""/></a>
                         <a class="ig" href="https://www.instagram.com/raianafernandez/" target="_blank"><img src="imagens/instagram.png" alt=""/></a>
                         <a class="be" href="https://www.behance.net/FoxDesignGrafico" target="_blank"><img src="imagens/behance.png" alt=""/></a>
-                    </div>
+                </div>
             </div>
             <div id="scroller" class="center">
                     <a class="vermais" href="#portfolio"><p>veja mais</p>
