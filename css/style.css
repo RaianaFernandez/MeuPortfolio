@@ -16,8 +16,7 @@ html{
 body{
     margin: 0 auto; 
 	min-width:400px;
-    width:100%;
-    max-width:2000px;
+    width:100%;    
     background: #f0f0f0;
 }
 html, body{
