@@ -514,7 +514,11 @@ opacity:0.8;
     height:10px;
     background:#FF5565;
 }
+.job-list{
+    flex-wrap:wrap;
+}
 .job{
+    min-width:190px;
     display:flex;
     flex-direction: column;
     margin:20px 0;
