@@ -487,7 +487,7 @@ opacity:0.8;
     }
 
 }
-#myskills{
+#myskills,#projects{
     padding:30px 20px;
     font-size:1.8rem;
 }
@@ -537,6 +537,60 @@ opacity:0.8;
 }
 .job span p{
     font-style:italic;
+}
+/*-------------------PROJETOS--------------------*/
+#projetos{
+    
+}
+#projetos>div{
+    display:flex;
+    margin:30px 0;
+}
+#poupit{
+    flex-wrap: wrap-reverse;   
+}
+#projetos>div>div{
+    min-width:450px;
+    width:50%;
+    display:flex;
+}
+
+#projetos a{
+    text-decoration:underline;
+    font-weight: 400;
+}
+#projetos a{
+    text-decoration:underline;
+    font-weight: 400;
+}
+#projetos a:hover{
+    color:#FF5565;
+}
+#projetos p{
+    font-size:1.6rem;
+    font-style:italic;
+}
+#projetos label{
+    color:#FF5565;
+    font-size:1.9rem;
+    font-weight:bold;
+    margin:10px 0;
+}
+.apresentacao{
+    align-items: center;
+    justify-content: center;
+}
+.apresentacao iframe{
+    
+    width:100%;
+    min-height:400px;
+    max-width:700px;
+    max-height:600px;
+}
+.descricao {
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 /*-------------------FOOTER--------------------*/
 
@@ -598,6 +652,12 @@ footer .social a{margin:0 5px;}
 	.text{
 		height:350px;
 	}
+    #projetos>div>div{
+        width:100%;
+    }
+    #projetos .descricao{
+        margin:20px;
+    }
 }
 
 
